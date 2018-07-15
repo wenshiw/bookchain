@@ -14,10 +14,9 @@ import Favourite from '@material-ui/icons/FavoriteBorder';
 const styles = {
   card: {
     width: '345px',
-
   },
   media: {
-    height: 0,
+    height: '80px',
     paddingTop: '56.25%', // 16:9
   },
 };
