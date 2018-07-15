@@ -5,10 +5,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import ImagaAvatar from './ImagaAvatar';
+import BookList from '../BookList/BookList';
 
 function TabContainer(props) {
   return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
+    <Typography component="div" style={{ padding: 8 * 3, marginTop: '80px'}}>
       {props.children}
     </Typography>
   );
@@ -40,15 +42,17 @@ class SimpleTabs extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="absolute">
           <Tabs value={value} onChange={this.handleChange}>
             <Tab label="Item One" />
             <Tab label="Item Two" />
             <Tab label="Item Three" href="#basic-tabs" />
+            
+            <ImagaAvatar/>
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One</TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
+        {value === 0 && <TabContainer>Item one</TabContainer>}
+        {value === 1 && <TabContainer><BookList /></TabContainer>}
         {value === 2 && <TabContainer>Item Three</TabContainer>}
       </div>
     );

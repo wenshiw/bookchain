@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import NavPills from './components/navigationBar/NavPills';
+import NavBar from './components/NavBar/NavBar';
+import Book from './components/Book/Book';
 
 class App extends Component {
   render() {
-    return (<NavPills/>);
+    return (
+      <div>
+    <NavBar/>
+    </div>
+    );
   }
 }
 
